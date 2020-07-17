@@ -13,9 +13,10 @@ import {
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1, backgroundColor: 'white', marginHorizontal: 17}}>
+      <View style={{flex: 1, backgroundColor: 'white'}}>
         {/* search bar */}
-        <View style={{flexDirection: 'row', paddingTop: 15}}>
+        <View
+          style={{flexDirection: 'row', paddingTop: 15, marginHorizontal: 17}}>
           <View style={{position: 'relative', flex: 1}}>
             <TextInput
               style={styles.inputText}
@@ -37,7 +38,7 @@ const App = () => {
           </View>
         </View>
         {/* GOPAY */}
-        <View style={{marginTop: 8}}>
+        <View style={{marginTop: 8, marginHorizontal: 17}}>
           <View style={styles.topWrapper}>
             <Image source={require('./src/assets/icon/gopay.png')} />
             <Text style={{color: 'white', fontSize: 17, fontWeight: 'bold'}}>
@@ -60,6 +61,71 @@ const App = () => {
             <View style={styles.gopayIcon}>
               <Image source={require('./src/assets/icon/more.png')} />
               <Text style={styles.gopayText}>More</Text>
+            </View>
+          </View>
+        </View>
+        <View style={{flexDirection: 'row', flexWrap: 'wrap', marginTop: 18}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              width: '100%',
+              marginBottom: 18,
+            }}>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-ride.png')} />
+              </View>
+              <Text style={styles.textFeature}>GO-RIDE</Text>
+            </View>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-car.png')} />
+              </View>
+              <Text style={styles.textFeature}>GO-CAR</Text>
+            </View>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-bluebird.png')} />
+              </View>
+              <Text style={styles.textFeature}>GO-BLUEBIRD</Text>
+            </View>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-send.png')} />
+              </View>
+              <Text style={styles.textFeature}>GO-SEND</Text>
+            </View>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              width: '100%',
+            }}>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-deals.png')} />
+              </View>
+              <Text style={styles.textFeature}>GO-DEALS</Text>
+            </View>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-pulsa.png')} />
+              </View>
+              <Text style={styles.textFeature}>GO-PULSA</Text>
+            </View>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-food.png')} />
+              </View>
+              <Text style={styles.textFeature}>GO-FOOD</Text>
+            </View>
+            <View style={styles.wrapperFeature}>
+              <View style={styles.iconFeature}>
+                <Image source={require('./src/assets/icon/go-more.png')} />
+              </View>
+              <Text style={styles.textFeature}>MORE</Text>
             </View>
           </View>
         </View>
@@ -168,6 +234,25 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     marginTop: 15,
+  },
+  iconFeature: {
+    width: 60,
+    height: 60,
+    borderWidth: 1,
+    borderColor: '#EFEFEF',
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textFeature: {
+    fontSize: 11,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 6,
+  },
+  wrapperFeature: {
+    width: '25%',
+    alignItems: 'center',
   },
 });
 

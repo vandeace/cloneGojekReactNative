@@ -13,9 +13,9 @@ import {
 const App = () => {
   return (
     <View style={{flex: 1}}>
-      <View style={{flex: 1, backgroundColor: 'white'}}>
-        <View
-          style={{marginHorizontal: 17, flexDirection: 'row', paddingTop: 15}}>
+      <View style={{flex: 1, backgroundColor: 'white', marginHorizontal: 17}}>
+        {/* search bar */}
+        <View style={{flexDirection: 'row', paddingTop: 15}}>
           <View style={{position: 'relative', flex: 1}}>
             <TextInput
               style={styles.inputText}
@@ -36,7 +36,36 @@ const App = () => {
             <Image source={require('./src/assets/icon/promo.png')} />
           </View>
         </View>
+        {/* GOPAY */}
+        <View style={{marginTop: 8}}>
+          <View style={styles.topWrapper}>
+            <Image source={require('./src/assets/icon/gopay.png')} />
+            <Text style={{color: 'white', fontSize: 17, fontWeight: 'bold'}}>
+              Rp 50.000
+            </Text>
+          </View>
+          <View style={styles.bottonWrapper}>
+            <View style={styles.gopayIcon}>
+              <Image source={require('./src/assets/icon/pay.png')} />
+              <Text style={styles.gopayText}>Pay</Text>
+            </View>
+            <View style={styles.gopayIcon}>
+              <Image source={require('./src/assets/icon/nearby.png')} />
+              <Text style={styles.gopayText}>Nearby</Text>
+            </View>
+            <View style={styles.gopayIcon}>
+              <Image source={require('./src/assets/icon/topup.png')} />
+              <Text style={styles.gopayText}>Top Up</Text>
+            </View>
+            <View style={styles.gopayIcon}>
+              <Image source={require('./src/assets/icon/more.png')} />
+              <Text style={styles.gopayText}>More</Text>
+            </View>
+          </View>
+        </View>
       </View>
+
+      {/* tab navigation */}
       <View style={styles.wrapper}>
         <View style={styles.navItem}>
           <View>
@@ -113,6 +142,32 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     backgroundColor: 'white',
     marginRight: 18,
+  },
+  topWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#2c5fb8',
+    borderTopLeftRadius: 4,
+    borderTopRightRadius: 4,
+    padding: 14,
+  },
+  bottonWrapper: {
+    flexDirection: 'row',
+    paddingTop: 20,
+    paddingBottom: 14,
+    backgroundColor: '#2f65bd',
+    borderBottomLeftRadius: 4,
+    borderBottomRightRadius: 4,
+  },
+  gopayIcon: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  gopayText: {
+    fontSize: 13,
+    fontWeight: 'bold',
+    color: 'white',
+    marginTop: 15,
   },
 });
 

@@ -5,6 +5,7 @@ import SearchBar from './src/components/SearchBar';
 import Gopay from './src/components/Gopay';
 import GoMenu from './src/components/GoMenu';
 import ScrollNews from './src/components/ScrollNews';
+import Banner from './src/components/Banner';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           />
           {/* NEWS MENU */}
           <ScrollNews />
+          <Banner />
         </View>
       </ScrollView>
       {/* tab navigation */}
